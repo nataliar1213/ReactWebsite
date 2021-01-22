@@ -1,19 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 import HorizontalScroll from "./horizontal-scroll";
-
-const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    font-family: sans-serif;
-  }
-`;
 
 const Main = styled.main``;
 
@@ -21,12 +10,6 @@ const HorizontalSection = styled.section`
   position: relative;
   width: 100%;
   min-height: 100vh;
-`;
-
-const BumperSection = styled.section`
-  text-align: center;
-  padding: 128px 16px;
-  background-image: url("./assets/Pexels Videos 2611250.mp4");
 `;
 
 const CardsContainer = styled.div`
@@ -55,24 +38,15 @@ const SampleCards = React.memo(() =>
 );
 
 const App = () => (
-  <>
-    <GlobalStyle />
-    <Main>
-      <BumperSection>
-        <h2>Scroll down to reach the horizontal scroll section</h2>
-      </BumperSection>
-      <HorizontalSection>
-        <HorizontalScroll>
-          <CardsContainer>
-            <SampleCards />
-          </CardsContainer>
-        </HorizontalScroll>
-      </HorizontalSection>
-      <BumperSection>
-        <h2>You have left the horizontal horizontal scroll section</h2>
-      </BumperSection>
-    </Main>
-  </>
+  <Main>
+    <HorizontalSection>
+      <HorizontalScroll>
+        <CardsContainer>
+          <SampleCards />
+        </CardsContainer>
+      </HorizontalScroll>
+    </HorizontalSection>
+  </Main>
 );
 
 const rootElement = document.getElementById("root");
