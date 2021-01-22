@@ -26,7 +26,7 @@ const HorizontalSection = styled.section`
 const BumperSection = styled.section`
   text-align: center;
   padding: 128px 16px;
-  background-image: url("/assets/Pexels Videos 2611250.mp4");
+  background-image: url("./assets/Pexels Videos 2611250.mp4");
 `;
 
 const CardsContainer = styled.div`
